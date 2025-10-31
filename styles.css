@@ -4,10 +4,10 @@
   --dark-1: #222426;
   --dark-2: #33373a;
   --muted: rgba(255,255,255,0.75);
-  --bg: #f4f6f9;
+  --bg: #f0f0f0;
 }
 *{box-sizing:border-box}
-html,body{
+body{
   height:100%;
   margin:0;
   font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
@@ -84,7 +84,6 @@ main{padding:2rem 1rem 4rem}
 .project-tile a{align-self:flex-start;text-decoration:none;padding:0.45rem 0.7rem;border-radius:6px;border:1px solid rgba(11,114,133,0.12);background:transparent;color:#0b7285;transition:background 0.18s,color 0.18s;}
 .project-link:hover{background:var(--accent);color:#fff;border-color:#c83a46;}
 
-footer{padding:1rem;text-align:center;color:#333}
 
 #contact h2{color:#111}
 #contact form {
@@ -96,7 +95,7 @@ footer{padding:1rem;text-align:center;color:#333}
   border-radius:5px;
   border:none;
   color:#222;
-  background:#edeef0;
+  background:#fff;
   font-size:1em;
 }
 #contact textarea{resize:vertical}
@@ -113,7 +112,7 @@ footer{padding:1rem;text-align:center;color:#333}
 }
 #contact button:hover{background:#a82e38}
 #contact p{color:#333;margin-top:1em;}
-#contact a{color:var(--accent);text-decoration:underline;}
+#contact a{color:var(--accent);text-decoration:none;}
 
 @media (max-width:900px){
   .projects{grid-template-columns:repeat(2,1fr)}
@@ -128,14 +127,85 @@ footer{padding:1rem;text-align:center;color:#333}
 
 /* Dark mode */
 body.dark-mode{
-  background:#1a1b1e;color:#eee;
+  background:#1a1b1e;color:#eee ;
 }
 body.dark-mode #navbar, body.dark-mode .hero-cta{
   background:#171819;color:#f8c;
 }
 body.dark-mode .project-tile{background:#232435;color:#dedede;}
 body.dark-mode main, body.dark-mode #project-section h2, body.dark-mode #contact h2{color:#eee;}
+body.dark-mode .project-tile p{color:#bae;}
 body.dark-mode footer{color:#aaa;}
-body.dark-mode #contact input, body.dark-mode #contact textarea{background:#232435;color:#fff;}
+body.dark-mode #contact input, body.dark-mode #contact textarea {background:#232435;color:#fff;}
 body.dark-mode #contact button{background:#c83a46;}
 body.dark-mode #contact button:hover{background:#a82e38}
+body.dark-mode #contact p {color:#fff;}
+
+
+/* Footer */
+footer {
+  padding: 1.5em 1em 1em 1em;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  font-size: 1.05em;
+  border-top: 1px solid #e0e0e0;
+  transition: background 0.2s, color 0.2s;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: underline;
+  margin: 0 0.25em;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+footer a:hover, footer a:focus {
+  color: #a82e38;
+  text-decoration: none;
+}
+
+footer p {
+  margin: 0.2em 0;
+  letter-spacing: 0.2px;
+}
+
+/* DARK MODE SUPPORT */
+body.dark-mode footer {
+  background: var(--dark-2);
+  color: #e6e6e6;
+  border-top: 1px solid #242629;
+}
+body.dark-mode footer a {
+  color: #fcccdc;
+}
+body.dark-mode footer a:hover,
+body.dark-mode footer a:focus {
+  color: #fff;
+  background: #c83a46;
+  text-decoration: underline;
+}
+
+
+/* About paragraph styling */
+.hero-inner .about-me {
+  max-width: 680px;
+  margin: 1.5rem auto 1.5rem auto;
+  font-size: 1.18rem;
+  line-height: 1.5;
+  color: var(--muted);  /* Applies your accent-muted color for welcoming tone */
+  background: rgba(255,255,255,0.10);
+  border-left: 4px solid var(--accent);
+  padding: 1.1em 1em 1.1em 1.5em;
+  border-radius: 7px;
+  box-shadow: 0 2px 12px rgba(30,30,40,0.05);
+  font-weight: 400;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+/* When in dark mode */
+body.dark-mode .hero-inner p {
+  background: rgba(34,36,38,0.45);
+  color: #ffd6db;
+  border-left-color: #ff5673;
+}

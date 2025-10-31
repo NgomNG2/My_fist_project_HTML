@@ -1,68 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Portfolio — Ngalla NGOM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="brand">NGALLA NGOM</div>
+    <ul>
+      <li><a href="#welcome-section">About</a></li>
+      <li><a href="#project-section">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a id="profile-link" href="https://github.com/NgomNG2" target="_blank" rel="noopener noreferrer">
+          My GitHub
+        </a>
+      </li>
+      <li>
+        <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      </li>
+    </ul>
+  </nav>
 
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet" 
-    />
-    <link rel="stylesheet" href="style.css" />
-    
-  </head>
-  <body>
-    <header>
-      <h1>Bonjour, je suis Ngalla NGOM</h1>
-      <p>Étudiant à l'UAM, passionné par le web et les technologies.</p>
-    </header>
+  <header id="welcome-section">
+    <div class="hero-inner">
+      <!-- Optional: add your profile picture below -->
+      <!-- <img src="your-photo.jpg" alt="Your Name" class="profile-pic" /> -->
+      <h1>Hey I am Ngalla NGOM</h1>
+      <p class="lead">a web developer</p>
+      <p class="about-me">
+      I'm an enthusiastic web development student passionate about creating interactive and user-friendly websites.  
+      My main interests include JavaScript, HTML, and CSS – I love solving coding challenges and bringing creative ideas to life through frontend development.
+      Whether it’s building sorting visualizers or experimenting with new frameworks, I’m always exploring ways to grow my skills.
+    </p>
+    </div>
+    <div class="hero-cta">
+      <a href="#project-section">Start coding!</a>
+    </div>
+  </header>
 
-    <section id="about">
-      <h2>À propos de moi</h2>
-      <p>
-        Je suis étudiant en Ingénierie Informatique, intéressé par le
-        développement web, les outils numériques et l'innovation.
-      </p>
+  <main role="main">
+    <section id="project-section" aria-labelledby="projects-header">
+      <h2 id="projects-header">Projects</h2>
+      <div class="projects">
+        <article class="project-tile">
+          <div>
+            <h3>Sorting Visualizer</h3>
+            <p class="tired">Animated demo of sorting algorithms with step-by-step highlights.</p>
+          </div>
+          <a class="project-link" href="https://github.com/NgomNG2/My_Work/tree/main/Shorting_Visulalizer" target="_blank">View Project</a>
+        </article>
+
+        <article class="project-tile">
+          <div>
+            <h3>Shopping Cart</h3>
+            <p>E-commerce shopping cart with dynamic item management using JavaScript.</p>
+          </div>
+          <a class="project-link" href="https://github.com/NgomNG2/My_Work/tree/main/Shorting_Visulalizer" target="_blank">View Project</a>
+        </article>
+
+        <article class="project-tile">
+          <div>
+            <h3>Todo List</h3>
+            <p>Interactive todo list app with add, delete, and mark-as-complete features  using JS &amp; localStorage..</p>
+          </div>
+          <a class="project-link" href="https://github.com/NgomNG2/My_Work/tree/main/To_Do_App" target="_blank">View Project</a>
+        </article>
+      </div>
     </section>
 
-    <section id="education">
-      <h2>Parcours académique</h2>
-      <ul>
-        <li>L1 - Sciences et Techniques de l'Ingénieur </li>
-        <li>L2 - Ingénierie Info</li>
-        <li>Certificat Git & GitHub - GalsenAI</li>
-      </ul>
+    <section id="contact" aria-labelledby="contact-header">
+      <h2 id="contact-header">Contact Me</h2>
+      <form id="contact-form" autocomplete="off">
+        <input required type="text" name="name" placeholder="Your name" />
+        <input required type="email" name="email" placeholder="Your email" />
+        <textarea required name="message" placeholder="Your message" rows="4"></textarea>
+        <button type="submit">Send</button>
+      </form>       
     </section>
+  </main>
 
-    <section id="interests">
-      <h2>Centres d'intérêt</h2>
-      <p>Programmation, design web, lecture, IA, hackathons.</p>
-    </section>
+  <footer>
+  <p>
+    <a href="mailto:ngomngalla12@gmail.com">Email</a> |
+    <a href="https://github.com/NgomNG2" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/ngalla-ngom" target="_blank">LinkedIn</a>
+  </p>
+  <p style="margin-top:0.7em;">Made with ❤️ by NG2 &mdash; &COPY; 2025</p>
+</footer>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email : <a href="mailto:prenom.nom@uam.edu.sn">prenom.nom@uam.edu.sn</a>
-      </p>
-      <p>
-        GitHub :
-        <a href="https://github.com/votre-profil" target="_blank"
-          >github.com/votre-profil</a
-        >
-      </p>
-      <p>
-        LinkedIn :
-        <a href="https://linkedin.com/in/votre-profil" target="_blank"
-          >linkedin.com/in/votre-profil</a
-        >
-      </p>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Mon Portfolio - Club Informatique UAM</p>
-    </footer>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
